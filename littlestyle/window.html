@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-window</title>
+    <style>
+
+div{
+    height: 500px;
+}
+    </style>
+    <script>
+        window.addEventListener("scroll",function(e){
+            var sumheight=document.body.scrollHeight;
+            var currheight=document.documentElement.scrollTop;
+            var viewheight=document.documentElement.clientHeight;
+            var screen=window.screen.availHeight;
+            console.log(screen);
+            console.log(sumheight);
+            console.log(currheight);
+            console.log(viewheight);
+        });
+       function a(){
+           alert("lallala");
+           confirm("afdfds");
+           prompt("dsfasdffd");
+            window.history.forward();
+        }
+    </script>
+</head>
+<body>
+<div>
+
+    <input type="button" value="forward" onclick="a()" />
+
+</div>
+<div>
+
+</div>
+<div>
+
+</div>
+</body>
+</html>

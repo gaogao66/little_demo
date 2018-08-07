@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img:first-child{
+            width:300px;
+            height:200px;
+            display:block;
+        }
+        img{
+            width:300px;
+            height:200px;
+            display:none;
+        }
+        button{
+            width:300px;
+            height:30px;
+        }
+        .lele{
+            width:300px;
+            height:200px;
+            overflow:hidden;
+        }
+    </style>
+    <script>
+        var n=0;
+        function m(){
+            n = (n+1)%5;
+            var array=document.getElementById('lele').getElementsByTagName('img');
+            for(var i=0;i<array.length;i++){
+                if(n==i)
+                {
+                    if(i-1>-1)
+                    {
+                        array[i-1].style.display='none';
+                    }
+                    else{
+                        array[i+4].style.display='none';
+                    }
+                    array[i].style.display='block';
+                    console.log(i);
+                }
+            }
+        }
+        function h() {
+            n = (n +4) % 5;
+            var array = document.getElementById('lele').getElementsByTagName('img');
+                for (var i = 0; i < array.length; i++) {
+                    if (n == i) {
+                        if (i + 1 < 5) {
+                            array[i + 1].style.display = 'none';
+                        }
+                        else {
+                            array[4-i].style.display = 'none';
+                        }
+                        array[i].style.display = 'block';
+                        console.log(i);
+                    }
+                }
+        }
+    </script>
+</head>
+<body>
+<button name="1" value="1" onclick="m()"></button>
+<div id="lele">
+    <img src="../img/1.jpeg" />
+    <img src="../img/2.jpeg" />
+    <img src="../img/3.jpeg" />
+    <img src="../img/4.jpeg"/>
+    <img src="../img/5.jpeg" />
+</div>
+<button name="2" value="2" onclick="h()"></button>
+</body>
+</html>

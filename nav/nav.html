@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/core.js"></script>
+    <link href="nav_css.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div class="container">
+        <div class="box"><li class="text">first</li ></div>
+        <div class="box"><li class="text">second</li></div>
+        <div class="box"><li class="text">third</li></div>
+        <div class="box"><li class="text">forth</li></div>
+        <div class="box"><li class="text">fifth</li></div>
+        <div class="box"><li class="text">sixth</li></div>
+</div>
+<script>
+    //For Demo only
+    var box = document.getElementsByClassName('box');
+    console.log(box);
+    for(var i = 0; i < box.length; i++)
+        addClass(box,i);
+
+
+    function addClass(box,id){
+        setTimeout(function(){
+            if(id > 0) {
+                console.log(box[id-1].classList);
+                box[id-1].classList.remove('hover');
+            }
+            box[id].classList.add('hover');
+        }, id*750);
+    }
+</script>
+</body>
+</html>

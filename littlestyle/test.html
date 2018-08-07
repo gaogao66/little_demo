@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <ul id="myList1">
+            <li>Coffee</li>
+            <li>Tea</li>
+        </ul>
+        <ul id="myList2">
+            <li>Water</li>
+            <li>Milk</li>
+        </ul>
+
+
+        <button onclick="myFunction();">试一下</button>
+
+        <script>
+            function myFunction() {
+                var itm = document.getElementById("myList2").lastChild;
+                var cln = itm.cloneNode(false);
+                console.log(itm,cln);
+                document.getElementById("myList1").appendChild(cln);
+            }
+        </script>
+</body>
+</html>

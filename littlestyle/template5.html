@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5元素template</title>
+    <style>
+        template{
+            display:block;
+            width:500px;
+            height:500px;
+            background:lightcyan;
+            z-index:-1;
+        }
+        img{
+            display:block;
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <template id="template">
+        <img src="deco_circle.jpg" />
+    </template>
+    <div id="contain">
+    </div>
+    <script>
+        var template = document.getElementById("template");
+
+        var temp = document.importNode(template.content, true);
+
+        var contain = document.getElementById("contain");
+
+        contain.appendChild(temp);
+    </script>
+</body>
+</html>

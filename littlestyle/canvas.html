@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+<canvas id="mycanvas" width="400px" height="400px"></canvas>
+<script>
+    var c=document.getElementById("mycanvas");
+    var cxt=c.getContext("2d");
+    // cxt.fillStyle="#0443f4";
+    // cxt.moveTo(50,50);
+    // cxt.lineTo(350,50);
+    // cxt.lineTo(350,350);
+    // cxt.lineTo(50,350);
+    // cxt.lineTo(50,50);
+    // cxt.fill();
+    // cxt.arc(200,200,50,0,2*Math.PI,true);
+    // cxt.fill();
+    var grd=cxt.createLinearGradient(0,0,300,50);
+    grd.addColorStop(0,"#000000");
+    grd.addColorStop(1,"#FF0000");
+    cxt.fillStyle=grd;
+    cxt.arc(200,200,50,0,2*Math.PI,true);
+    cxt.fill();
+</script>
+</body>
+</html>

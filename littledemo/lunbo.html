@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes mycartoon{
+            0%,100%{left:0px;}
+            25%{left:-200px;}
+            50%{left:-400px;}
+            75%{left:-600px;}
+        }
+        .qbmy img{
+            float:left;
+            width:200px;
+            height:200px;
+        }
+        .qbmy{
+            float:left;
+            width:800px;
+            height:200px;
+            position:absolute;
+            animation:mycartoon 10s infinite linear;
+        }
+        .container{
+            width:200px;
+            height:200px;
+            overflow:hidden;
+            position:relative;
+            /*float:left;*/
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="qbmy">
+        <img src="img/1.jpeg" />
+        <img src="img/2.jpeg" />
+        <img src="img/3.jpeg" />
+        <img src="img/4.jpeg" />
+        <img src="img/5.jpeg" />
+    </div>
+</div>
+</body>
+</html>

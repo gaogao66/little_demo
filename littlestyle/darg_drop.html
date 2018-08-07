@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖放</title>
+    <script>
+        function allowdrag(ev) {
+            ev.preventDefault();//阻止默认方式即允许拖放
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData('text', ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData('text');
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+<div style="border:1px solid black;width:400px; height:50px;" ondrop="drop(event)" ondragover="allowdrag(event)">
+
+</div>
+<h1 id="lala" ondragstart="drag(event)" draggable="true" width="400px">啦啦啦啦啦啦</h1>
+</body>
+</html>

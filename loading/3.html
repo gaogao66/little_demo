@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #container{
+            width:100%;
+            height:200px;
+            margin:0 auto;
+        }
+        #first{
+            width:300px;
+            height:200px;
+            float:left;
+            margin:20px;
+            border:1px solid black;
+        }
+       #first div{
+           width:80px;
+           height:80px;
+           border-radius:50%;
+           border:10px solid lightgray;
+           border-right:10px solid black;
+           animation:myframes 2s infinite linear;
+           position:relative;
+           top:50%;
+           left:50%;
+           transform:translate(-50%,-50%);
+       }
+       #second{
+           width:300px;
+           height:200px;
+           float:left;
+           margin:20px;
+           border:1px solid black;
+       }
+       #load{
+           width:100px;
+           height:100px;
+           border:10px solid lightgray;
+           position:relative;
+           border-radius:50%;
+           margin: 25px 0 0 25px;
+       }
+       #load:after{
+           content:"";
+           width:100%;
+           height:100%;
+           top:-8px;
+           left:-7px;
+           border-radius:50%;
+           position: absolute;
+           border:10px solid lightgray;
+           border-color:transparent black transparent transparent;
+           animation:myframes 1s infinite linear;
+       }
+        @keyframes myframes{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+
+        }
+        #third{
+            width:300px;
+            height:200px;
+            border:1px solid black;
+            float:left;
+            margin:20px;
+        }
+        #third div{
+            margin:auto;
+            /*left:50%;*/
+            /*top:50%;*/
+            /*position:absolute;*/
+            /*transform:translate(-50%,-50%);*/
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            background:linear-gradient(transparent 0%,transparent 70%,black 30%,black 100%);
+            animation:loading-1 1.5s linear infinite;
+            /*完成一次完整动画所需的时间必须*/
+        }
+        @keyframes second{
+            0%{
+                transform:scaleY(1);
+            }
+            50%{
+                transform:scaleY(2);
+            }
+            100%{
+                transform:scaleY(1);
+            }
+        }
+        #forth{
+            margin:20px;
+            width:300px;
+            height:200px;
+            border:1px solid black;
+            float:left;
+        }
+        #forth div{
+            border-radius:20%;
+            width:3px;
+            height:20px;
+            background:black;
+            margin-left:5px;
+            float:left;
+            top:50%;
+            left:50%;
+            position:relative;
+            transform:translate(-50%,-50%);
+            animation:second 1s infinite linear;
+        }
+        #forth div:nth-child(1){
+            animation:second 1s infinite 0.1s linear;
+        }
+       #forth div:nth-child(2){
+           animation:second 1s infinite 0.2s linear;
+       }
+       #forth div:nth-child(3){
+           animation:second 1s infinite 0.3s linear;
+       }
+       #forth div:nth-child(4){
+           animation:second 1s infinite 0.4s linear;
+       }
+       #forth div:nth-child(5){
+           animation:second 1s infinite 0.5s linear;
+       }
+       #fifth{
+           margin:20px;
+           float:left;
+           width:300px;
+           height:200px;
+           border:1px solid black;
+           position:relative;
+       }
+       #fifth div{
+           width:20px;
+           height:20px;
+           border-radius:50%;
+           background:black;
+           animation:third 1s infinite linear;
+           top:10%;
+           left:50%;
+           transform:translate(-50%,-50%);
+           position:relative;
+       }
+       @keyframes third{
+           0%{
+               transform:scale(1);
+               opacity:1;
+           }
+           50%{
+               transform:scale(0.5);
+               opacity:0.5;
+           }
+           100%{
+               transform:scale(1);
+               opacity:1;
+           }
+       }
+       #fifth div:nth-child(1){
+           top: 110px;
+           left:100px;
+           animation:third 1s infinite 0.1s linear;
+       }
+       #fifth div:nth-child(2){
+           top: 90px;
+           left: 115px;
+           animation:third 1s infinite 0.2s linear;
+       }
+       #fifth div:nth-child(3){
+           top: 70px;
+           left: 130px;
+           animation:third 1s infinite 0.3s linear;
+       }
+       #fifth div:nth-child(4){
+           top: 90px;
+           left:-115px;
+           animation:third 1s infinite 0.4s linear;
+       }
+       #fifth div:nth-child(5){
+           top:70px;
+           left:-100px;
+           animation:third 1s infinite 0.5s linear;
+       }
+       #fifth div:nth-child(6){
+           top:-90px;
+           left:-115px;
+           animation:third 1s infinite 0.6s linear;
+       }
+       #fifth div:nth-child(7){
+           top:-70px;
+           left:-130px;
+           animation:third 1s infinite 0.7s linear;
+       }
+       #fifth div:nth-child(8){
+           top:-90px;
+           left:115px;
+           animation:third 1s infinite 0.8s linear;
+       }
+       .box{
+           width: 100%;
+           padding: 3%;
+           box-sizing: border-box;
+           overflow: hidden;
+       }
+       .loader{
+           width: 30%;
+           border: 1px solid #ccc;
+           float: left;
+           margin-left: 3%;
+           height: 200px;
+           display: flex;
+           box-sizing: border-box;
+           align-items: center;
+           justify-content: center;
+       }
+       /*第一种动画加载开始*/
+       .loading-1{
+           width: 35px;
+           height: 35px;
+           position: relative;
+       }
+       @-webkit-keyframes loading-1{
+           0%{
+               transform: rotate(0deg);
+           }
+           50%{
+               transform: rotate(180deg);
+           }
+           100%{
+               transform: rotate(360deg);
+           }
+       }
+       .loading-1 i{
+           display:block;
+           animation:loading-1 1.5s infinite linear;
+           /*linear设置animation匀速 transition-timing-function*/
+           width:100%;
+           height:100%;
+           border-radius:50%;
+           /*设置背景为渐变的以百分比为界限，默认从上到下*/
+           background:linear-gradient(transparent 0%,transparent 60%,gray 40%,gray 100%);
+       }
+       .loading-1 i:hover{
+           /*设置动画的停止*/
+           animation-play-state:paused;
+       }
+       /*第一animation-play-state:paused;种动画加载结束*/
+       /*!*第二种动画加载开始*!*/
+       @-webkit-keyframes loading-2{
+           0%{
+               transform: scale(1);
+           }
+           50%{
+               transform: scale(0.4);
+           }
+           100%{
+               transform: scale(1);
+           }
+       }
+       .loading-2 i{
+           display: inline-block;
+           width: 4px;
+           height: 35px;
+           margin: 0 2px;
+           background: #333;
+           border-radius: 2px;
+           -webkit-animation: loading-2 1s ease-in 0.1s infinite;
+       }
+       .loading-2 i:nth-child(1){
+           -webkit-animation: loading-2 1s ease-in 0.1s infinite;
+       }
+       .loading-2 i:nth-child(2){
+           -webkit-animation: loading-2 1s ease-in 0.2s infinite;
+       }
+       .loading-2 i:nth-child(3){
+           -webkit-animation: loading-2 1s ease-in 0.3s infinite;
+       }
+       .loading-2 i:nth-child(4){
+           -webkit-animation: loading-2 1s ease-in 0.4s infinite;
+       }
+       .loading-2 i:nth-child(5){
+           -webkit-animation: loading-2 1s ease-in 0.5s infinite;
+       }
+       /*!*第二种动画加载结束*!*/
+
+       /*!*第三种动画加载开始*!*/
+       @-webkit-keyframes loading-3{
+           50%{
+               transform: scale(0.4);
+               opacity: 0.3;
+           }
+           100%{
+               transform: scale(1);
+               opacity: 1;
+           }
+       }
+       .loading-3{
+           position: relative;
+       }
+       .loading-3 i{
+           display: block;
+           width: 15px;
+           height: 15px;
+           border-radius: 50%;
+           position: absolute;
+           background: #333;
+       }
+       .loading-3 i:nth-child(1){
+           top: 25px;
+           left: 0;
+           -webkit-animation: loading-3 1s ease 0s infinite;
+       }
+       .loading-3 i:nth-child(2){
+           top: 17px;
+           left: 17px;
+           -webkit-animation: loading-3 1s ease 0.12s infinite;
+       }
+       .loading-3 i:nth-child(3){
+           top: 0;
+           left: 25px;
+           -webkit-animation: loading-3 1s ease 0.24s infinite;
+       }
+       .loading-3 i:nth-child(4){
+           top: -17px;
+           left: 17px;
+           -webkit-animation: loading-3 1s ease 0.36s infinite;
+       }
+       .loading-3 i:nth-child(5){
+           top: -25px;
+           left: 0;
+           -webkit-animation: loading-3 1s ease 0.48s infinite;
+       }
+       .loading-3 i:nth-child(6){
+           top: -17px;
+           left: -17px;
+           -webkit-animation: loading-3 1s ease 0.6s infinite;
+       }
+       .loading-3 i:nth-child(7){
+           top: 0;
+           left: -25px;
+           -webkit-animation: loading-3 1s ease 0.72s infinite;
+       }
+       .loading-3 i:nth-child(8){
+           top: 17px;
+           left: -17px;
+           -webkit-animation: loading-3 1s ease 0.84s infinite;
+       }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="loader">
+        <div class="loading-1">
+            <i></i>
+        </div>
+    </div>
+    <div class="loader">
+        <div class="loading-2">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    <div class="loader">
+        <div class="loading-3">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+</div>
+<div id="container">
+    <div id="first">
+        <div ></div>
+    </div>
+    <div id="second">
+        <div id="load"></div>
+    </div>
+    <div id="third">
+        <div ></div>
+    </div>
+    <div id="forth">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="fifth">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+</body>
+</html>
