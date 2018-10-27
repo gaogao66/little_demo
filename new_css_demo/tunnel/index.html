@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tunnel</title>
+    <link href="index_css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <ul class="tunnel">
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+                <li class="ring"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var li=document.getElementsByTagName('li');
+        for(var i=0;i<li.length;i++){
+            li[i].style.color="hsl("+i*5+",100%,50%)";
+            console.log(li[i].style.color);
+            li[i].style.transform="rotateX("+i*5+"deg) translateY(200px)";
+            console.log(li[i].style.transform);
+        }
+        console.log(li.length);
+    </script>
+</body>
+</html>

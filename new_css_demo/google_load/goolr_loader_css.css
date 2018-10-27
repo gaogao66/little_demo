@@ -1,0 +1,342 @@
+*{
+    margin:0;
+    padding:0;
+}
+@keyframes myframes1 {
+    0%,100%{
+        transform:translateY(-3em) rotate(-45deg);
+        transform-origin:0 100%;
+    }
+    50%{
+        transform:translate(0,2em) rotate(-45deg);
+        transform-origin:0 100%;
+    }
+}
+@keyframes myframes2 {
+    0%,100%{
+        transform:translate(-3em,-3em) rotate(-45deg);
+        transform-origin:100% 0;
+    }
+    50%{
+        transform:translate(-3em,-8em) rotate(-45deg);
+        transform-origin:100% 0;
+    }
+}
+@keyframes myframes3 {
+    0%,100%{
+        transform:translate(-3em,-9em) rotate(-45deg);
+        transform-origin:100% 100%;
+    }
+    50%{
+        transform:translate(2em,-9em) rotate(-45deg);
+        transform-origin:100% 100%;
+    }
+}
+@keyframes myframes4 {
+    0%,100%{
+        transform:translate(0,-9em) rotate(-45deg);
+        transform-origin:0 0;
+    }
+    50%{
+        transform:translate(-5em,-9em) rotate(-45deg);
+        transform-origin:0 0; ;
+    }
+}
+@keyframes myframes11 {
+    0%,100%{
+        transform:translate(0,-3em) ;
+    }
+    25%{
+        transform:translate(0,0) ;
+    }
+    50%{
+        transform:translate(-3em,0) ;
+    }
+    75%{
+        transform:translate(-3em,-3em) ;
+    }
+}
+@keyframes myframes22 {
+    0%,100%{
+        transform:translate(-3em,-3em) ;
+    }
+    25%{
+        transform:translate(-3em,-6em) ;
+    }
+    50%{
+        transform:translate(0,-6em) ;
+    }
+    75%{
+        transform:translate(0,-3em) ;
+    }
+}
+@keyframes myframes33 {
+    0%,100%{
+        transform:translate(-3em,-9em) ;
+    }
+    25%{
+        transform:translate(0,-9em) ;
+    }
+    50%{
+        transform:translate(0,-6em) ;
+    }
+    75%{
+        transform:translate(-3em,-6em) ;
+    }
+}
+@keyframes myframes44 {
+    0%,100%{
+        transform:translate(0,-9em) ;
+    }
+    25%{
+        transform:translate(-3em,-9em) ;
+    }
+    50%{
+        transform:translate(-3em,-12em) ;
+    }
+    75%{
+        transform:translate(0,-12em) ;
+    }
+}
+@keyframes zhuan{
+    0%{
+        transform:rotate(0);
+    }
+    50%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes myframes111 {
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes myframes222 {
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes myframes333 {
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes myframes444 {
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+.row{
+    width:66em;
+    height:22em;
+    margin:0 auto;
+}
+.demo{
+    width:20em;
+    height:20em;
+    background:black;
+    margin:10px;
+    float:left;
+}
+.demo i{
+    position:relative;
+    content:'';
+    width:3em;
+    height:3em;
+    left:50%;
+    top:50%;
+    display: block;
+    /*变成块状，这个属性一定要加，要不然不显示。因为<i>标签不是块级元素*/
+}
+.row .demo:nth-child(1) i:nth-child(1){
+    background:red;
+    animation:myframes1 1s infinite ease-out;
+}
+.row .demo:nth-child(1) i:nth-child(2){
+    background:green;
+    animation:myframes2 1s infinite ease-out;
+}
+.row .demo:nth-child(1) i:nth-child(3){
+    background:yellow;
+    animation:myframes3 1s infinite ease-out;
+}
+.row .demo:nth-child(1) i:nth-child(4){
+    background:blue;
+    animation:myframes4 1s infinite ease-out;
+}
+.double{
+    position:relative;
+    left:50%;
+    top:50%;
+    transform:translate(-25%,-25%) rotate(-45deg);
+}
+.rotate{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-tadius:50%;
+    animation:zhuan 2s infinite ease-out;
+}
+.row .demo:nth-child(2) i:nth-child(1){
+    background:red;
+    transform:translateY(-3em);
+    transform-origin:0 100%;
+    animation:myframes11 1s infinite ease-out;
+}
+.row .demo:nth-child(2) i:nth-child(2){
+    background:green;
+    transform:translate(-3em,-3em);
+    transform-origin:100% 0;
+    animation:myframes22 1s infinite ease-out;
+}
+.row .demo:nth-child(2) i:nth-child(3){
+    background:blue;
+    transform:translate(-3em,-9em);
+    transform-origin:100% 100%;
+    animation:myframes33 1s infinite ease-out;
+}
+.row .demo:nth-child(2) i:nth-child(4){
+    background:yellow;
+    transform:translate(0,-9em);
+    transform-origin:0 0;
+    animation:myframes44 1s infinite ease-out;
+}
+.row .demo:nth-child(3) i{
+    position:absolute;
+    margin:20px;
+    border-radius:5px;
+}
+.row .demo:nth-child(3) i:nth-child(1){
+    background:red;
+    top:25%;
+    left:25%;
+    animation:myframes111 1s infinite ease-out;
+}
+.row .demo:nth-child(3) i:nth-child(2){
+    background:green;
+    top:25%;
+    left:50%;
+    animation:myframes222 1s infinite ease-out;
+}
+.row .demo:nth-child(3) i:nth-child(3){
+    background:blue;
+   top:50%;
+    left:50%;
+    animation:myframes333 1s infinite ease-out;
+}
+.row .demo:nth-child(3) i:nth-child(4){
+    background:yellow;
+    top:50%;
+    left:25%;
+    animation:myframes444 1s infinite ease-out;
+}
+
+.container .row:nth-child(2) .demo:nth-child(1) i{
+    border-radius:50%;
+}
+.container .row:nth-child(2) .demo:nth-child(2){
+    position:relative;
+}
+.container .row:nth-child(2) .demo:nth-child(2) i{
+    position:absolute;
+}
+.container .row:nth-child(2) .demo:nth-child(2)  i:nth-child(1){
+    top:25%;
+    left:25%;
+    /*transform:translate(25%,25%);*/
+    animation:sector1 1s infinite ease-out;
+}
+.container .row:nth-child(2) .demo:nth-child(2)  i:nth-child(2){
+    top:25%;
+    left:50%;
+    animation:sector2 1s infinite ease-out;
+}
+.container .row:nth-child(2) .demo:nth-child(2)  i:nth-child(3){
+    top:50%;
+    left:50%;
+    animation:sector3 1s infinite ease-out;
+}
+.container .row:nth-child(2) .demo:nth-child(2)  i:nth-child(4){
+    top:50%;
+    left:25%;
+    animation:sector4 1s infinite ease-out;
+}
+@keyframes sector1 {
+    0%,100%{
+        transform:translate(25%,25%);
+    }
+    50%{
+        top:50%;
+        left:50%;
+        transform:translate(-87.5%,-87.5%);
+        transform-origin:100% 100%;
+    }
+}
+@keyframes sector2 {
+    0%,100%{
+        transform:translate(25%,50%);
+    }
+    50%{
+        top:50%;
+        left:25%;
+        transform:translate(-87.5%,-87.5%);
+        transform-origin:0 100%;
+    }
+}
+@keyframes sector3 {
+    0%,100%{
+        transform:translate(50%,50%);
+    }
+    50%{
+        top:50%;
+        left:50%;
+        transform:translate(12.5,12.5%);
+        transform-origin:0 0;
+    }
+}
+@keyframes sector4 {
+    0%,100%{
+        transform:translate(50%,25%);
+    }
+    50%{
+        top:25%;
+        left:50%;
+        transform:translate(-87.5%,-87.5%);
+        transform-origin:100% 0;
+    }
+}
